@@ -21,6 +21,8 @@ export class HomePage {
       password:this.password
     }
     this.log.push(log);
+    this.name='';
+    this.password='';
     console.log('saved',this.log);
   }
 }
