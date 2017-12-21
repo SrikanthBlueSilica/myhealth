@@ -1,24 +1,25 @@
-<ion-header>
-  <ion-navbar text-center>
-    <ion-title>My Health</ion-title>
+<ion-header  >
+  <ion-navbar  text-center>
+    <ion-title >My Health</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content >
+<ion-content class="body" >
+  
   <div class="page-home">
-    <ion-item >
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-
     <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-label color="primary" stacked>UserName</ion-label>
+      <ion-input type="text" placeholder="UserName" [(ngModel)] = "name" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" stacked>Password</ion-label>
+      <ion-input type="password" placeholder="Password" [(ngModel)] = "password" ></ion-input>
     </ion-item>
   </div>
-
+  
   <div class="home">
-  <button class="home-button" ion-button color="secondary">LogIn</button>
-</div>
-</ion-content>
+    <button class="home-button" ion-button color="secondary" (click) ="login()">LogIn</button>
+  </div>
 
+</ion-content>
