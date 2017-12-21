@@ -8,8 +8,12 @@ import { NavController } from 'ionic-angular';
 
 export class HomePage {
   public name:any;
+  public sname:any;
   public password:any;
+  public spassword:any;
+  public rspassword:any;
   public log:Array<any>=[];
+  public signup:Array<any>=[];
   
   constructor(public navCtrl: NavController) {
 
@@ -23,6 +27,17 @@ export class HomePage {
     this.log.push(log);
     this.name='';
     this.password='';
-    console.log('saved',this.log);
+    console.log('login',this.log);
+  }
+  sign(){
+    var sign = {
+      sname:this.sname,
+      spassword:this.spassword
+    }
+    this.signup.push(sign);
+    this.sname='',
+    this.spassword=''
+    this.rspassword=''
+    console.log('signup',this.signup);
   }
 }
