@@ -1,0 +1,8 @@
+{
+  "name": "bluesilicaionicapp",
+  "app_id": "94c60551",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
