@@ -10,7 +10,7 @@ export class HomePage {
   public name:any;
   public password:any;
   public log:Array<any>=[];
-
+  
   constructor(public navCtrl: NavController) {
 
   }
