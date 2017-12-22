@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Events } from 'ionic-angular';
+import { AboutPage } from '../about/about';
 
 @Component({
   selector: 'page-home',
@@ -15,15 +17,44 @@ export class HomePage {
   public email:any;
   public bloodgroup:any;
   public mobileno:any;
+  public dummy:Array<any>=[]
 
-  public log:Array<any>=[];
+  public log:Array<any>=[{
+    patientid: "", 
+    name: "",
+    fname:"",
+    mname:"",
+    gender:"",
+    email:"",
+    bloodgroup:"",
+    mobileno:""
+  }];
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController,public events: Events) {
+    
   }
+
+  changePage(event) {
+    // Sharing data using NavController
+    this.navCtrl.push(AboutPage, {
+        param1: 'John', param2: 'Johnson'
+    });
+} 
   
-  saveData(){
-    var log={
+  saveData(event){
+
+    this.navCtrl.push(AboutPage, {
+      patientid:this.patientid,
+      name:this.name,
+      fname:this.fname,
+      mname:this.mname,
+      gender:this.gender,
+      email:this.email,
+      bloodgroup:this.bloodgroup,
+      mobileno:this.mobileno
+  });
+
+    /*var log={
       patientid:this.patientid,
       name:this.name,
       fname:this.fname,
@@ -35,7 +66,7 @@ export class HomePage {
     }
 
     this.log.push(log);
-    localStorage.setItem('myData',JSON.stringify(this.log));
+    localStorage.setItem('myData',JSON.stringify(this.log));*/
     this.patientid='';
     this.name='';
     this.fname='';
@@ -44,7 +75,7 @@ export class HomePage {
     this.email='';
     this.bloodgroup='';
     this.mobileno='';
-    console.log('login',this.log);
+   // console.log('login',this.log);
   }
 
 /*send(){
