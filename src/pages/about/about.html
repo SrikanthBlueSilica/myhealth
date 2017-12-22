@@ -1,11 +1,53 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar text-center>
     <ion-title>
-      About
+      Patient Details
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <table class="bio-table">
+    <tr>
+      <td><span >PatientId</span></td>
+      <td>:</td>
+      <td>{{patientid}}</td>
+    </tr>
+    <tr>
+      <td><span>Name</span></td>
+      <td>:</td>
+      <td>{{name}}</td>
+    </tr>
+    <tr>
+      <td><span>FatherName</span></td>
+      <td>:</td>
+      <td>{{fname}}</td>
+    </tr>
+    <tr>
+      <td><span>MotherName</span></td>
+      <td>:</td>
+      <td>{{mname}}</td>
+    </tr>
+    <tr>
+      <td><span>Gender</span></td>
+      <td>:</td>
+      <td>{{gender}}</td>
+    </tr>
+    <tr>
+      <td><span>Email</span></td>
+      <td>:</td>
+      <td>{{email}}</td>
+    </tr>   
+    <tr>
+      <td><span>BloodGroup</span></td>
+      <td>:</td>
+      <td>{{bloodgroup}}</td>
+    </tr>
+    <tr>
+      <td><span>MobileNo</span></td>
+      <td>:</td>
+      <td>{{mobileno}}</td>
+    </tr>
+  </table>
 
 </ion-content>

@@ -7,37 +7,49 @@ import { NavController } from 'ionic-angular';
 })
 
 export class HomePage {
+  public patientid:any;
   public name:any;
-  public sname:any;
-  public password:any;
-  public spassword:any;
-  public rspassword:any;
+  public fname:any;
+  public mname:any;
+  public gender:any;
+  public email:any;
+  public bloodgroup:any;
+  public mobileno:any;
+
   public log:Array<any>=[];
-  public signup:Array<any>=[];
-  
+
   constructor(public navCtrl: NavController) {
 
   }
-
-  login(){
+  
+  saveData(){
     var log={
+      patientid:this.patientid,
       name:this.name,
-      password:this.password
+      fname:this.fname,
+      mname:this.mname,
+      gender:this.gender,
+      email:this.email,
+      bloodgroup:this.bloodgroup,
+      mobileno:this.mobileno
     }
+
     this.log.push(log);
+    localStorage.setItem('myData',JSON.stringify(this.log));
+    this.patientid='';
     this.name='';
-    this.password='';
+    this.fname='';
+    this.mname='';
+    this.gender='';
+    this.email='';
+    this.bloodgroup='';
+    this.mobileno='';
     console.log('login',this.log);
   }
-  sign(){
-    var sign = {
-      sname:this.sname,
-      spassword:this.spassword
-    }
-    this.signup.push(sign);
-    this.sname='',
-    this.spassword=''
-    this.rspassword=''
-    console.log('signup',this.signup);
-  }
+
+/*send(){
+  let data = {"demo": "demo"};
+  localStorage.setItem('myData',JSON.stringify(data));
+}*/
+
 }

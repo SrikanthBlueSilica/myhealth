@@ -1,39 +1,67 @@
-<ion-header  >
-  <ion-navbar  text-center>
+<ion-header>
+  <ion-navbar text-center>
     <ion-title >My Health</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="body" >
-
-  <ion-item>
-    <ion-label color="primary" stacked>UserName</ion-label>
-    <ion-input type="text" placeholder="UserName" [(ngModel)] = "name" ></ion-input>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label color="primary" stacked>Password</ion-label>
-    <ion-input type="password" placeholder="Password" [(ngModel)] = "password" ></ion-input>
-  </ion-item>
-  
-  <button class="home-button" ion-button color="secondary" (click) ="login()">login</button>
-  
-  <ion-title  text-center>New User SignUp Here</ion-title>
-  
-  <ion-item>
-    <ion-label color="primary" stacked>UserName</ion-label>
-    <ion-input type="text" placeholder="UserName" [(ngModel)] = "sname" ></ion-input>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label color="primary" stacked>Password</ion-label>
-    <ion-input type="password" placeholder="Password" [(ngModel)] = "spassword" ></ion-input>
+<ion-content>
+  <ion-item class="style-1" >
+    <ion-label color="primary" stacked>PatientId</ion-label>
+    <ion-input type="text" placeholder="patientid" [(ngModel)] = "patientid" ></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label color="primary" stacked>Re Enter Password</ion-label>
-    <ion-input type="password" placeholder="Re Enter Password" [(ngModel)] = "rspassword" ></ion-input>
+  <ion-item >
+    <ion-label color="primary" stacked>Full Name</ion-label>
+    <ion-input type="text" placeholder="fullname" [(ngModel)] = "name" ></ion-input>
   </ion-item>
-  <button class="home-button" ion-button color="secondary" (click) ="sign()">signup</button>
 
+  <ion-item >
+    <ion-label color="primary" stacked>Father Name</ion-label>
+    <ion-input type="text" placeholder="fathername" [(ngModel)] = "fname" ></ion-input>
+  </ion-item>
+  
+  <ion-item >
+    <ion-label color="primary" stacked>Mother Name</ion-label>
+    <ion-input type="text" placeholder="mothername" [(ngModel)] = "mname" ></ion-input>
+  </ion-item>
+  
+  <ion-item >
+    <ion-label color="primary" stacked>Gender</ion-label>
+    <ion-select placeholder="gender" [(ngModel)]="gender">
+      <ion-option value="male">Male</ion-option>
+      <ion-option value="female">Female</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item >
+    <ion-label color="primary" stacked>Email</ion-label>
+    <ion-input type="text" placeholder="email" [(ngModel)] = "email" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Blood Group</ion-label>
+    <ion-select placeholder="bloodgroup" [(ngModel)]="bloodgroup">
+      <ion-option value="a+">A+</ion-option>
+      <ion-option value="b+">B+</ion-option>
+      <ion-option value="ab+">AB+</ion-option>
+      <ion-option value="o+">O+</ion-option>
+      <ion-option value="a-">A-</ion-option>
+      <ion-option value="b-">B-</ion-option>
+      <ion-option value="ab-">AB-</ion-option>
+      <ion-option value="o-">O-</ion-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary" stacked>MobileNo</ion-label>
+    <ion-input type="password" placeholder="mobileno" [(ngModel)] = "mobileno" ></ion-input>
+  </ion-item>
+  
+  <button class="home-button" ion-button color="secondary" (click) ="saveData()">Submit</button>
+  
 </ion-content>
+
+
+  
+  
+  
