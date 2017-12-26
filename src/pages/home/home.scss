@@ -39,4 +39,53 @@
     border: solid 1px #707070;
     box-shadow: 0 0 5px 1px #969696;
   }*/
-  
+.style-1 ion-input[type="text"] {
+    padding: 5px;
+    border: solid 1px #dcdcdc;
+    margin:20px; 
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.style-1 ion-input[type="text"]:focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+}
+
+.style-1 ion-select {
+    padding: 10px;
+    border: solid 1px #dcdcdc;
+    margin:0px 25px 0px 27px; 
+    width: 100%;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.style-1 ion-select:focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+}
+
+input:valid {
+    color: green;
+}
+
+input[type="text"]:valid +span::after {
+    content: "✓";
+    color: green;
+}
+
+input[type="text"]:invalid {
+    color: red;
+}
+
+textarea:valid {
+    color: green;
+}
+
+textarea[type="text"]:valid +span::before {
+    content: "✓";
+    color: green;
+}
+
+textarea:invalid {
+    color: red;
+}

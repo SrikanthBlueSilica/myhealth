@@ -5,60 +5,68 @@
 </ion-header>
 
 <ion-content>
-  <ion-item class="style-1" >
-    <ion-label color="primary" stacked>PatientId</ion-label>
-    <ion-input type="text" placeholder="patientid" [(ngModel)] = "patientid" ></ion-input>
-  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <div class="style-1">
+          <ion-input type="text" placeholder="patientid" pattern="[0-9]{4}" maxlength="4" [(ngModel)] = "patientid" ></ion-input>
+        </div>
+        
+        <div class="style-1">
+          <ion-input type="text" placeholder="fullname" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "name" ></ion-input>
+        </div>
+        
+        <div class="style-1">
+          <ion-input type="text" placeholder="fathername" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "fname" ></ion-input>
+        </div>
 
-  <ion-item >
-    <ion-label color="primary" stacked>Full Name</ion-label>
-    <ion-input type="text" placeholder="fullname" [(ngModel)] = "name" ></ion-input>
-  </ion-item>
+        <ion-item class="style-1">
+          <ion-select placeholder="gender" [(ngModel)]="gender">
+            <ion-option value="male">Male</ion-option>
+            <ion-option value="female">Female</ion-option>
+          </ion-select>
+        </ion-item>
 
-  <ion-item >
-    <ion-label color="primary" stacked>Father Name</ion-label>
-    <ion-input type="text" placeholder="fathername" [(ngModel)] = "fname" ></ion-input>
-  </ion-item>
+      </ion-col>
+
+      <ion-col col-6>
+
+        <div class="style-1">
+          <ion-input type="text" placeholder="mothername" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "mname" ></ion-input>
+        </div>
+        
+        <div class="style-1">
+          <ion-input type="text" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)] = "email" ></ion-input>
+        </div>
+        
+        <div class="style-1">
+          <ion-input type="text" placeholder="mobileno" pattern="[0-9 || +]{10,13}" maxlength="11" [(ngModel)] = "mobileno" ></ion-input>
+        </div>
+        
+        <ion-item class="style-1">
+          <ion-select placeholder="bloodgroup" [(ngModel)]="bloodgroup">
+            <ion-option value="a+">A+</ion-option>
+            <ion-option value="b+">B+</ion-option>
+            <ion-option value="ab+">AB+</ion-option>
+            <ion-option value="o+">O+</ion-option>
+            <ion-option value="a-">A-</ion-option>
+            <ion-option value="b-">B-</ion-option>
+            <ion-option value="ab-">AB-</ion-option>
+            <ion-option value="o-">O-</ion-option>
+          </ion-select>
+        </ion-item>
+    
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+
   
-  <ion-item >
-    <ion-label color="primary" stacked>Mother Name</ion-label>
-    <ion-input type="text" placeholder="mothername" [(ngModel)] = "mname" ></ion-input>
-  </ion-item>
-  
-  <ion-item >
-    <ion-label color="primary" stacked>Gender</ion-label>
-    <ion-select placeholder="gender" [(ngModel)]="gender">
-      <ion-option value="male">Male</ion-option>
-      <ion-option value="female">Female</ion-option>
-    </ion-select>
-  </ion-item>
 
-  <ion-item >
-    <ion-label color="primary" stacked>Email</ion-label>
-    <ion-input type="text" placeholder="email" [(ngModel)] = "email" ></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label color="primary" stacked>Blood Group</ion-label>
-    <ion-select placeholder="bloodgroup" [(ngModel)]="bloodgroup">
-      <ion-option value="a+">A+</ion-option>
-      <ion-option value="b+">B+</ion-option>
-      <ion-option value="ab+">AB+</ion-option>
-      <ion-option value="o+">O+</ion-option>
-      <ion-option value="a-">A-</ion-option>
-      <ion-option value="b-">B-</ion-option>
-      <ion-option value="ab-">AB-</ion-option>
-      <ion-option value="o-">O-</ion-option>
-    </ion-select>
-  </ion-item>
   
-  <ion-item>
-    <ion-label color="primary" stacked>MobileNo</ion-label>
-    <ion-input type="password" placeholder="mobileno" [(ngModel)] = "mobileno" ></ion-input>
-  </ion-item>
   
   <button class="home-button" ion-button color="secondary" (click) ="saveData()">Submit</button>
-  <button ion-button full color="primary" (click)="changePage()" full>Change Page</button>
+  
 </ion-content>
 
 
