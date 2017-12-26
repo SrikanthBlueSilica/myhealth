@@ -18,17 +18,24 @@ export class LoginPage {
   changePage(event) {
     // Sharing data using NavController
     this.navCtrl.push(HomePage, {
-      
-  
+    
     });
+    this.username='';
+    this.password='';
+    var log = document.getElementById("cheking");
+    log.setAttribute("disabled","disabled");
   } 
 
   login() {
     var log = document.getElementById("cheking");
-    if(this.username==''||this.username==null||this.password==''||this.password==null) {
+    if(this.username==''||this.username==null||this.password==''||this.password==null||
+    this.username!='srikanth'||this.password!='sri123') {
       log.setAttribute("disabled","disabled");
     } else  {
       log.removeAttribute("disabled");
     }
+  }
+  clean(){
+    
   }
 }
