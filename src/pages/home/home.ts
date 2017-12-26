@@ -40,9 +40,20 @@ export class HomePage {
         param1: 'John', param2: 'Johnson'
     });
 } 
-  
-  saveData(event){
 
+disable() {
+  var check = document.getElementById("check");
+  if(this.patientid==''||this.patientid==null||this.name==''||this.name==null||
+  this.fname==''||this.fname==null||this.mname==''||this.mname==null||
+  this.email==''||this.email==null||this.gender==''||this.gender==null ||this.bloodgroup==''||
+  this.bloodgroup==null || this.mobileno==''||this.mobileno==null) {
+    check.setAttribute("disabled","disabled");
+  } else  {
+    check.removeAttribute("disabled");
+  }
+}
+  
+  saveData(event) {
     this.navCtrl.push(AboutPage, {
       patientid:this.patientid,
       name:this.name,
@@ -67,6 +78,11 @@ export class HomePage {
 
     this.log.push(log);
     localStorage.setItem('myData',JSON.stringify(this.log));*/
+   
+   // console.log('login',this.log);
+  }
+
+  clean() {
     this.patientid='';
     this.name='';
     this.fname='';
@@ -75,12 +91,7 @@ export class HomePage {
     this.email='';
     this.bloodgroup='';
     this.mobileno='';
-   // console.log('login',this.log);
+    var check = document.getElementById("check");
+    check.setAttribute("disabled","disabled");
   }
-
-/*send(){
-  let data = {"demo": "demo"};
-  localStorage.setItem('myData',JSON.stringify(data));
-}*/
-
 }
