@@ -40,9 +40,9 @@
     box-shadow: 0 0 5px 1px #969696;
   }*/
 .style-1 ion-input[type="text"] {
-    padding: 5px;
+    padding: 2px;
     border: solid 1px #dcdcdc;
-    margin:20px; 
+    margin-bottom:20px; 
     transition: box-shadow 0.3s, border 0.3s;
 }
 
@@ -54,7 +54,6 @@
 .style-1 ion-select {
     padding: 10px;
     border: solid 1px #dcdcdc;
-    margin:0px 25px 0px 27px; 
     width: 100%;
     transition: box-shadow 0.3s, border 0.3s;
 }
