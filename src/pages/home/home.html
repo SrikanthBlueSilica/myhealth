@@ -5,53 +5,69 @@
 </ion-header>
 
 <ion-content>
-        <div class="style-1">
-          <ion-input type="text" placeholder="patientid" pattern="[0-9]{4}" maxlength="4" [(ngModel)] = "patientid" ></ion-input>
-        </div>
-        
-        <div class="style-1">
-          <ion-input type="text" placeholder="fullname" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "name" ></ion-input>
-        </div>
-        
-        <div class="style-1">
-          <ion-input type="text" placeholder="fathername" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "fname" ></ion-input>
-        </div>
 
-        <ion-item class="style-1">
-          <ion-select placeholder="gender" [(ngModel)]="gender">
-            <ion-option value="male">Male</ion-option>
-            <ion-option value="female">Female</ion-option>
-          </ion-select>
-        </ion-item>
+    <ion-list>
+        
+          <ion-item  class="pad">
+              <ion-input type="text"  placeholder="PATIENTID" pattern="[0-9]{4}" maxlength="4" [(ngModel)] = "patientid" ></ion-input>
+          </ion-item>
+        
+          <ion-item  class="pad">
+              <ion-input type="text" placeholder="FULLNAME" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "name" ></ion-input>
+          </ion-item>
 
+          <ion-item  class="pad">
+              <ion-input type="text" placeholder="FATHERNAME" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "fname" ></ion-input>
+            </ion-item>
+
+            <ion-item  class="pad">
+                <ion-input type="text" placeholder="MOTHERNAME" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "mname" ></ion-input>
+              </ion-item>
+
+              <ion-item  class="pad">
+                  <ion-input type="text" placeholder="EMAIL" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)] = "email" ></ion-input>
+                </ion-item>
+
+                <ion-item  class="pad">
+                    <ion-input type="text" placeholder="MOBILENO" pattern="[0-9 || +]{10,13}" maxlength="11" [(ngModel)] = "mobileno" ></ion-input>
+                  </ion-item>
+
+                  <ion-item  class="pad">
+                      <ion-select placeholder="GENDER" [(ngModel)]="gender">
+                        <ion-option value="Male">Male</ion-option>
+                        <ion-option value="Female">Female</ion-option>
+                      </ion-select>
+                    </ion-item>
+            
+
+        <ion-item >
+            <ion-select placeholder="BLOODGROUP" [(ngModel)]="bloodgroup">
+              <ion-option value="A+">A+</ion-option>
+              <ion-option value="B+">B+</ion-option>
+              <ion-option value="AB+">AB+</ion-option>
+              <ion-option value="O+">O+</ion-option>
+              <ion-option value="A-">A-</ion-option>
+              <ion-option value="B-">B-</ion-option>
+              <ion-option value="AB-">AB-</ion-option>
+              <ion-option value="O-">O-</ion-option>
+            </ion-select>
+          </ion-item>
+                 
+        
+        </ion-list>
+
+      
+     
+
+        
     
 
     
 
-        <div class="style-1">
-          <ion-input type="text" placeholder="mothername" pattern="[a-z || A-Z]{3,20}" maxlength="10" [(ngModel)] = "mname" ></ion-input>
-        </div>
+ 
+     
+
         
-        <div class="style-1">
-          <ion-input type="text" placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)] = "email" ></ion-input>
-        </div>
-        
-        <div class="style-1">
-          <ion-input type="text" placeholder="mobileno" pattern="[0-9 || +]{10,13}" maxlength="11" [(ngModel)] = "mobileno" ></ion-input>
-        </div>
-        
-        <ion-item class="style-1">
-          <ion-select placeholder="bloodgroup" [(ngModel)]="bloodgroup">
-            <ion-option value="a+">A+</ion-option>
-            <ion-option value="b+">B+</ion-option>
-            <ion-option value="ab+">AB+</ion-option>
-            <ion-option value="o+">O+</ion-option>
-            <ion-option value="a-">A-</ion-option>
-            <ion-option value="b-">B-</ion-option>
-            <ion-option value="ab-">AB-</ion-option>
-            <ion-option value="o-">O-</ion-option>
-          </ion-select>
-        </ion-item>
   
   <button class="home-button" ion-button color="secondary" (click) ="saveData()">Submit</button>
   

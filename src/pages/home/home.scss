@@ -39,29 +39,6 @@
     border: solid 1px #707070;
     box-shadow: 0 0 5px 1px #969696;
   }*/
-.style-1 ion-input[type="text"] {
-    padding: 2px;
-    border: solid 1px #dcdcdc;
-    margin-bottom:20px; 
-    transition: box-shadow 0.3s, border 0.3s;
-}
-
-.style-1 ion-input[type="text"]:focus {
-    border: solid 1px #707070;
-    box-shadow: 0 0 5px 1px #969696;
-}
-
-.style-1 ion-select {
-    padding: 10px;
-    border: solid 1px #dcdcdc;
-    width: 100%;
-    transition: box-shadow 0.3s, border 0.3s;
-}
-
-.style-1 ion-select:focus {
-    border: solid 1px #707070;
-    box-shadow: 0 0 5px 1px #969696;
-}
 
 input:valid {
     color: green;
@@ -87,4 +64,8 @@ textarea[type="text"]:valid +span::before {
 
 textarea:invalid {
     color: red;
+}
+
+.pad {
+    margin-bottom: 20px;
 }
