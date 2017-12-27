@@ -8,11 +8,11 @@
     
     <ion-list>
         <ion-item>
-            <ion-input type="text" placeholder="Username" pattern="[a-z || A-Z]{8,20}" maxlength="10" (keyup)="login()" [(ngModel)] ="username" ></ion-input>
+            <ion-input type="text" placeholder="Username" pattern="[a-z || A-Z]{8,20}" maxlength="15" (keyup)="login()" [(ngModel)] ="username" ></ion-input>
         </ion-item>
         
         <ion-item>
-            <ion-input type="password" placeholder="Password" maxlength="10"  (keyup)="login()" [(ngModel)] ="password" ></ion-input>
+            <ion-input type="password" placeholder="Password" maxlength="15"  (keyup)="login()" [(ngModel)] ="password" ></ion-input>
         </ion-item>
     </ion-list>
 

@@ -6,10 +6,10 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Component({
-  templateUrl: 'login.html'
+  templateUrl: 'profile.html'
 })
 
-export class LoginPage {
+export class ProfilePage {
 
   public username:any;
   public password:any;
