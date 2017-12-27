@@ -32,7 +32,7 @@ export class LoginPage {
 
   login() {
     var log = document.getElementById("cheking");
-    this.http.get('assets/patient.json').map(res => res.json()).subscribe(data => {
+    this.http.get('https://raw.githubusercontent.com/SrikanthBlueSilica/ionic/master/ionicjson/patient.json').map(res => res.json()).subscribe(data => {
       this.posts = data;
       console.log("server",this.posts);
       for(let i=0; i<this.posts.length; i++) {
