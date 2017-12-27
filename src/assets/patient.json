@@ -1,3 +1,12 @@
 [{
-    "ary":[]
+    "username":"srikanth",
+    "password":"sri123"
+},
+{
+    "username":"daya",
+    "password":"daya123"
+},
+{
+    "username":"shiva",
+    "password":"shiva123"
 }]

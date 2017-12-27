@@ -55,4 +55,10 @@
 
   <button class="home-button" disabled ion-button color="secondary" id="check" (click) ="saveData()" (click) ="clean()" full>Submit</button>
 
+  <ion-list>
+    <ion-item *ngFor="let post of posts">
+      <img [src]="post.data.url" />
+    </ion-item>
+  </ion-list>
+
 </ion-content>

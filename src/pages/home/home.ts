@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Events } from 'ionic-angular';
 import { AboutPage } from '../about/about';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'page-home',
@@ -17,20 +19,11 @@ export class HomePage {
   public email:any;
   public bloodgroup:any;
   public mobileno:any;
-  public dummy:Array<any>=[]
+  public dummy:Array<any>=[];
 
-  public log:Array<any>=[{
-    patientid: "", 
-    name: "",
-    fname:"",
-    mname:"",
-    gender:"",
-    email:"",
-    bloodgroup:"",
-    mobileno:""
-  }];
+  public posts: any;
 
-  constructor(public navCtrl: NavController,public events: Events) {
+  constructor(public navCtrl: NavController,public events: Events,public http: Http) {
     
   }
 
@@ -65,7 +58,7 @@ disable() {
       mobileno:this.mobileno
   });
 
-    /*var log={
+    var log={
       patientid:this.patientid,
       name:this.name,
       fname:this.fname,
@@ -75,11 +68,9 @@ disable() {
       bloodgroup:this.bloodgroup,
       mobileno:this.mobileno
     }
-
-    this.log.push(log);
-    localStorage.setItem('myData',JSON.stringify(this.log));*/
    
-   // console.log('login',this.log);
+   this.dummy.push(log);
+   console.log('login',this.dummy);
   }
 
   clean() {
